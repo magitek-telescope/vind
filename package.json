@@ -1,7 +1,7 @@
 {
   "name": "vind",
-  "version": "0.2.3",
-  "main": "index.js",
+  "version": "0.3.0",
+  "main": "lib/index.js",
   "repository": "https://github.com/potato4d/vind.git",
   "author": "Hanatani Takuma <mail@potato4d.me>",
   "license": "MIT",
