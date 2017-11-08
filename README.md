@@ -1,11 +1,11 @@
-# obj-to-stylenames
+# vind
 
-Object to CSS class converter.
+Object to Vue style class name object converter.
 
 ## Usage
 
 ```js
-import objToStyleNames from 'obj-to-stylenames'
+import vind from 'vind'
 
 const obj = {
   ghost: true,
@@ -13,13 +13,13 @@ const obj = {
   size: 'large'
 }
 
-const result = console.log(objToStyleNames(obj))
+const result = console.log(vind(obj))
 
 console.log(result)
 /*
 {
   'is-ghost': true,
-  'is-primary': true
+  'is-primary': true,
   'is-large': true
 }
 */
@@ -33,7 +33,7 @@ console.log(result)
 </template>
 
 <script>
-import objToStyleNames from 'obj-to-stylenames'
+import vind from 'vind'
 export default {
   props: {
     ghost: Boolean,
@@ -43,7 +43,7 @@ export default {
   computed : {
     buttonClass () {
       const { ghost, size, button } = this
-      return objToStyleNames({ghost, size, button})
+      return vind({ghost, size, button})
     }
   }
 }

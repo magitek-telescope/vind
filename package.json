@@ -1,11 +1,12 @@
 {
-  "name": "obj-to-stylenames",
+  "name": "vind",
   "version": "0.1.0",
   "main": "index.js",
-  "repository": "https://github.com/potato4d/obj-to-styles.git",
+  "repository": "https://github.com/potato4d/vind.git",
   "author": "Hanatani Takuma <mail@potato4d.me>",
   "license": "MIT",
   "scripts": {
+    "prepublish": "yarn build",
     "precommit": "yarn test",
     "build": "babel src --out-dir lib",
     "watch": "babel src --out-dir lib --watch",

@@ -1,6 +1,6 @@
 // @flow
 
-function objToStyleNames (obj: Object) {
+function vind (obj: Object) {
   const styles = {}
   Object.entries(obj).forEach(([name, value]) => {
     switch (typeof value) {
@@ -17,4 +17,4 @@ function objToStyleNames (obj: Object) {
   return styles
 }
 
-export default objToStyleNames
+export default vind
