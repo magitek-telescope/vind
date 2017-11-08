@@ -1,8 +1,12 @@
 // @flow
 
+function entries (obj) {
+  return Object.keys(obj).map(key => [key, obj[key]])
+}
+
 function vind (obj: Object, prefix: string = 'is-') {
   const styles = {}
-  Object.entries(obj).forEach(([name, value]) => {
+  entries(obj).forEach(([name, value]) => {
     switch (typeof value) {
       case 'string': {
         styles[`${prefix}${value}`] = true
