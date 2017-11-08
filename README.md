@@ -13,14 +13,23 @@ const obj = {
   size: 'large'
 }
 
-const result = console.log(vind(obj))
-
-console.log(result)
+// Simple use
+console.log(vind(obj))
 /*
 {
   'is-ghost': true,
   'is-primary': true,
   'is-large': true
+}
+*/
+
+// Custom prefix
+console.log(vind(obj, '--'))
+/*
+{
+  '--ghost': true,
+  '--primary': true,
+  '--large': true
 }
 */
 ```
