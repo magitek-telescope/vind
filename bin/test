@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 yarn test:lint
 yarn test:ava
