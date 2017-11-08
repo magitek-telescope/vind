@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+yarn test:lint
+yarn test:ava
+yarn test:flow

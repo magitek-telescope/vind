@@ -1,6 +1,6 @@
 {
   "name": "obj-to-styles",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "https://github.com/potato4d/obj-to-styles.git",
   "author": "Hanatani Takuma <mail@potato4d.me>",
@@ -10,19 +10,25 @@
     "watch": "babel src --out-dir lib --watch",
     "flow": "flow",
     "ava": "ava",
-    "test": "ava -v",
+    "test": "./bin/test.sh",
+    "test:lint": "eslint ./src/**/*.js",
+    "test:ava": "ava -v",
+    "test:flow": "flow",
     "fmt": "prettier-eslint ./src/**/*.js --write",
-    "lint": "eslint ./src/**/*.js",
     "eslint": "eslint"
   },
   "devDependencies": {
     "ava": "^0.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^4.10.0",
     "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
@@ -33,6 +39,5 @@
     "prettier-eslint-cli": "^4.4.0"
   },
   "dependencies": {
-    "babel-preset-env": "^1.6.1"
   }
 }
