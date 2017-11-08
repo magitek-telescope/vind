@@ -1,15 +1,15 @@
 // @flow
 
-function vind (obj: Object) {
+function vind (obj: Object, prefix: string = 'is-') {
   const styles = {}
   Object.entries(obj).forEach(([name, value]) => {
     switch (typeof value) {
       case 'string': {
-        styles[`is-${value}`] = true
+        styles[`${prefix}${value}`] = true
         break
       }
       case 'boolean': {
-        styles[`is-${name}`] = value
+        styles[`${prefix}${name}`] = value
         break
       }
     }
