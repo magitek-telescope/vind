@@ -1,5 +1,13 @@
 # vind
 
+<p align="center">
+  <a href="https://travis-ci.org/potato4d/vind"><img src="https://travis-ci.org/potato4d/vind.svg?branch=master" alt="Build Status"></a>
+  <a href="https://www.npmjs.com/package/vind"><img src="https://img.shields.io/npm/dm/vind.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/vind"><img src="https://img.shields.io/npm/v/vind.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vind"><img src="https://img.shields.io/npm/l/vind.svg" alt="License"></a>
+  <br>
+</p>
+
 Object to Vue style class name object converter.
 
 ## Usage
