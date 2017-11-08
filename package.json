@@ -10,7 +10,7 @@
     "watch": "babel src --out-dir lib --watch",
     "flow": "flow",
     "ava": "ava",
-    "test": "./bin/test.sh",
+    "test": "./bin/test",
     "test:lint": "eslint ./src/**/*.js",
     "test:ava": "ava -v",
     "test:flow": "flow",
