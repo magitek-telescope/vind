@@ -1,12 +1,12 @@
 {
   "name": "vind",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "index.js",
   "repository": "https://github.com/potato4d/vind.git",
   "author": "Hanatani Takuma <mail@potato4d.me>",
   "license": "MIT",
   "scripts": {
-    "prepublishOnly": "yarn build",
+    "prepare": "yarn build",
     "precommit": "yarn test",
     "build": "babel src --out-dir lib",
     "watch": "babel src --out-dir lib --watch",
