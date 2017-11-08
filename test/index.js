@@ -1,12 +1,12 @@
 import test from 'ava'
-import objToStyles from '../lib'
+import objToStyleNames from '../lib'
 
 test('type: String', (t)=> {
   const obj = Object.create(null)
   obj['color'] = 'primary'
   obj['size'] = 'large'
 
-  const result = objToStyles(obj)
+  const result = objToStyleNames(obj)
   t.is(Object.keys(result).length, 2)
 
   t.is('color' in result, false)
@@ -22,7 +22,7 @@ test('type: Boolean', (t)=> {
   obj['ghost'] = true
   obj['submit'] = false
 
-  const result = objToStyles(obj)
+  const result = objToStyleNames(obj)
   t.is(Object.keys(result).length, 2)
 
   t.is('is-ghost' in result, true)
