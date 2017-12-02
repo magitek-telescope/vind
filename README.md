@@ -25,6 +25,16 @@ const obj = {
 console.log(vind(obj))
 /*
 {
+  'ghost': true,
+  'primary': true,
+  'large': true
+}
+*/
+
+// Custom prefix
+console.log(vind(obj, 'is-')) // FLOCSS style
+/*
+{
   'is-ghost': true,
   'is-primary': true,
   'is-large': true
@@ -32,7 +42,7 @@ console.log(vind(obj))
 */
 
 // Custom prefix
-console.log(vind(obj, '--'))
+console.log(vind(obj, '--')) // BEM Style
 /*
 {
   '--ghost': true,
