@@ -11,10 +11,10 @@ test('--type=string  --prefix=undefined', (t)=> {
 
   t.is('color' in result, false)
   t.is('size' in result, false)
-  t.is('is-color' in result, false)
-  t.is('is-size' in result, false)
-  t.is(result['is-primary'], true)
-  t.is(result['is-large'], true)
+  t.is('color' in result, false)
+  t.is('size' in result, false)
+  t.is(result['primary'], true)
+  t.is(result['large'], true)
 })
 
 test('--type=boolean --prefix=undefined', (t)=> {
@@ -25,38 +25,38 @@ test('--type=boolean --prefix=undefined', (t)=> {
   const result = vind(obj)
   t.is(Object.keys(result).length, 2)
 
-  t.is('is-ghost' in result, true)
-  t.is('is-submit' in result, true)
-  t.is(result['is-ghost'], true)
-  t.is(result['is-submit'], false)
+  t.is('ghost' in result, true)
+  t.is('submit' in result, true)
+  t.is(result['ghost'], true)
+  t.is(result['submit'], false)
 })
 
-test('--type=string  --prefix=--', (t)=> {
+test('--type=string  --prefix=is-', (t)=> {
   const obj = Object.create(null)
   obj['color'] = 'primary'
   obj['size'] = 'large'
 
-  const result = vind(obj, '--')
+  const result = vind(obj, 'is-')
   t.is(Object.keys(result).length, 2)
 
   t.is('color' in result, false)
   t.is('size' in result, false)
-  t.is('--color' in result, false)
-  t.is('--size' in result, false)
-  t.is(result['--primary'], true)
-  t.is(result['--large'], true)
+  t.is('is-color' in result, false)
+  t.is('is-size' in result, false)
+  t.is(result['is-primary'], true)
+  t.is(result['is-large'], true)
 })
 
-test('--type=boolean --prefix=--', (t)=> {
+test('is-type=boolean is-prefix=is-', (t)=> {
   const obj = Object.create(null)
   obj['ghost'] = true
   obj['submit'] = false
 
-  const result = vind(obj, '--')
+  const result = vind(obj, 'is-')
   t.is(Object.keys(result).length, 2)
 
-  t.is('--ghost' in result, true)
-  t.is('--submit' in result, true)
-  t.is(result['--ghost'], true)
-  t.is(result['--submit'], false)
+  t.is('is-ghost' in result, true)
+  t.is('is-submit' in result, true)
+  t.is(result['is-ghost'], true)
+  t.is(result['is-submit'], false)
 })

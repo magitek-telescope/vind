@@ -3,5 +3,8 @@
     "babel-preset-env",
     "flow"
   ],
-  "plugins": ["transform-class-properties", "add-module-exports"]
+  "plugins": [
+    "add-module-exports",
+    "transform-object-entries"
+  ]
 }
